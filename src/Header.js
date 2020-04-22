@@ -3,11 +3,14 @@ import React from 'react'
 
 function Header() {
   return(
-      <div>
-        <h1>
+    <body>
+      <header className="header-style">
+        <img src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png" alt="problem?" />
+        <p>
           Meme Generator 
-        </h1>
-      </div>
+        </p>
+      </header>
+    </body>
   )
 }
 

@@ -47,7 +47,7 @@ class MemeGenerator extends React.Component {
     return(
       <div>
         
-          <form onClick={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Top text"
@@ -62,13 +62,14 @@ class MemeGenerator extends React.Component {
               value={this.state.bottomText}
               onChange={this.handleChange}
             />
-            <button>Generate</button>
+            <button>Go!</button>
           </form>
 
-          <div>
-            <h1>{this.state.topText}</h1>
-            <h1>{this.state.bottomText}</h1>
+          <div className="meme">
             <img src={this.state.randomImg} alt="meme" />
+            <h2 className="top">{this.state.topText}</h2>
+            <h2 className="bottom">{this.state.bottomText}</h2>
+            
           </div>
       </div>
     )
