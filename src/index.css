@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -37,25 +36,20 @@ header > img {
 header > p {
   color: whitesmoke;
   font-size: 40px;
-  /* margin-left: 60px; */
-
 }
 
-form {
+.memeForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
   margin-bottom: 20px;
-  
-  
 }
 
 input, button {
   font-size: 20px;
   width: 250px;
-  /* margin: auto; */
-  
+  margin-bottom: 5px;
 }
 
 button {
@@ -100,23 +94,24 @@ button {
     2px 2px 5px #000;
 }
 
-.top {
-  top: 0;
-  
+.topText {
+  top: 0; 
 }
 
-.bottom{
+.bottomText {
   bottom: 0;
 }
-
+/**
+* When larger screens are used, show form inline
+*/
 @media screen and (min-width: 700px) {
-  form {
+  .memeForm {
     flex-direction: row;
     justify-content: center;
   }
   input, button {
     font-size: 30px;
-    /* justify-content: center; */
+    margin-right: 5px;
   }
   header > img {
     margin-left: 0px

@@ -33,9 +33,7 @@ class MemeGenerator extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     // console.log('clicked')
-    //Math.ceil (ceiling) is not used when generated random number based on array length because it has a bias.
-    //it will never round to the zero indice
-    
+    //Math.ceil (ceiling) is not used when generated random number based on array length because it has a bias.    
     const randomNum = Math.floor(Math.random() * this.state.memeData.length)
     const genNewRandImg = this.state.memeData[randomNum].url
     this.setState({
@@ -46,8 +44,7 @@ class MemeGenerator extends React.Component {
   render(){
     return(
       <div>
-        
-          <form onSubmit={this.handleSubmit}>
+          <form className="memeForm" onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Top text"
@@ -67,9 +64,8 @@ class MemeGenerator extends React.Component {
 
           <div className="meme">
             <img src={this.state.randomImg} alt="meme" />
-            <h2 className="top">{this.state.topText}</h2>
-            <h2 className="bottom">{this.state.bottomText}</h2>
-            
+            <h2 className="topText">{this.state.topText}</h2>
+            <h2 className="bottomText">{this.state.bottomText}</h2>
           </div>
       </div>
     )
