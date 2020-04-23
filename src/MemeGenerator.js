@@ -46,11 +46,13 @@ class MemeGenerator extends React.Component {
       <div>
           <form className="memeForm" onSubmit={this.handleSubmit}>
             <input
+              id="topText"
               type="text"
               placeholder="Top text"
               name="topText"
               value={this.state.topText}
               onChange={this.handleChange}
+              aria-label="Top text"
             />
             <input
               type="text"
@@ -58,14 +60,16 @@ class MemeGenerator extends React.Component {
               name="bottomText"
               value={this.state.bottomText}
               onChange={this.handleChange}
+              aria-label="bottom Text"
             />
             <button>Go!</button>
           </form>
 
           <div className="meme">
             <img src={this.state.randomImg} alt="meme" />
-            <h2 className="topText">{this.state.topText}</h2>
-            <h2 className="bottomText">{this.state.bottomText}</h2>
+            {/* Only render headings if there is text in it to ensure accessibility */}
+            {this.state.topText ? <h2 className="topText">{this.state.topText}</h2>: null } 
+            {this.state.bottomText ? <h2 className="bottomText">{this.state.bottomText}</h2> : null }
           </div>
       </div>
     )
