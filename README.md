@@ -14,8 +14,6 @@ Although a fun app, it can help the user brainstorm new meme slogans with images
 
 ### Visuals
 
-<!-- ![Alt text](/MGScreenShot1.jpg?raw=true "Meme Generator Screenshot")
-![Alt text](/MGScreenShot2.jpg?raw=true "Meme Generator Screenshot2") -->
 
 <img width="1030" alt="MGScreenShot1" src="https://user-images.githubusercontent.com/43302633/80743814-48189000-8ae3-11ea-9207-951feaa7c60a.png">
 <img width="1066" alt="MGScreenShot2" src="https://user-images.githubusercontent.com/43302633/80743827-4b138080-8ae3-11ea-9fdf-8dcf847f8eaf.png">
